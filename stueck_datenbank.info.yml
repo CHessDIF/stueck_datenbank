@@ -1,0 +1,5 @@
+name: stueck_datenbank
+type: module
+description: 'Erlaubt es Theater Stücke und ihre Rollen zu speichern.'
+core: 8.x
+package: stueck_datenbank

@@ -1,0 +1,28 @@
+<?php
+/**
+* @file
+* A description of what your module does.
+*/
+
+function stueck_datenbank_menu(){
+    return array(
+        'admin/content/stuecke/' => array(
+            'title' => 'StueckDatenbank_Stueck_Add'
+        ),
+    );
+}
+
+/**
+ * Implements hook_permission()
+ */
+
+function stueck_datenbank_permission(){
+    return array(
+        'Manage plays and roles' => array(
+            'title' => t('Manage plays and roles.')
+        ),
+        'View roles and plays' => array(
+            'title' => t('Allowed to look at all plays and Roles')
+        )
+    );
+}

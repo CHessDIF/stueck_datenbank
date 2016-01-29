@@ -1,0 +1,67 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: che
+ * Date: 05.11.15
+ * Time: 17:45
+ */
+/***
+ * Will create a basic Database
+ * Stueck = (id, Name)
+ * Rollen = (id, Name)
+ * RolleStueck (RId, Sid)
+ * @return Array.
+ */
+function stueck_datenbank_schema() {
+    $schema['StueckDatenbank_Stuecke'] = array(
+        'fields' => array(
+            'id' => array(
+                'type' => 'serial',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+            ),
+            'Stueckname' => array(
+                'type' => 'varchar',
+                'length' => 250,
+                'not null' => TRUE,
+            ),
+
+            ),
+        'primary key' => array('id')
+        );
+    $schema['StuckeDatenbank_Rollen'] = array(
+        'fields' => array(
+            'id' => array(
+                'type' => 'serial',
+                'not null' => TRUE,
+            ),
+            'Rollenname' => array(
+                'type' => 'varchar',
+                'length' => 250,
+                'not null' => TRUE,
+            ),
+
+        ),
+        'primary key' => array('id')
+        );
+
+    $schema['StueckDatenbank_RolleStueck'] = array(
+        'fields' => array(
+            'RollenId' => array(
+                'type' => 'int',
+                'not null' => TRUE,
+                'unsigned' => TRUE,
+            ),
+            'StueckId' => array(
+                'type' => 'int',
+                'not null' => TRUE,
+                'unsigned' => TRUE,
+            ),
+
+        ),
+        'primary key' => array('RollenId', 'StueckId'),
+    );
+
+    return $schema;
+
+}

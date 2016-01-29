@@ -1,0 +1,16 @@
+stueck_datenbank.stueck_add:
+  path: 'admin/content/stuecke'
+  defaults:
+    _form: '\Drupal\stueck_datenbank\AddStueck'
+    _title: 'Stücke anlegen'
+  requirements:
+    _permission: 'Manage plays and roles'
+
+
+stueck_datenbank.stueck_overview:
+  path: 'admin/content/stuecke/overview'
+  defaults:
+    _controller: '\Drupal\stueck_datenbank\StueckOverview::content'
+    _title: 'Stück Overview'
+  requirements:
+      _permission: 'Manage plays and Roles'

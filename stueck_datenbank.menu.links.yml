@@ -1,0 +1,6 @@
+StueckDatenbenk.StueckeAdd:
+  title: 'Stueck anlegen'
+  parent: system.admin_content
+  description: 'Neue Stuecke anlegen'
+  route_name: stueck_datenbank.stueck_add
+  weight: -1
